@@ -311,7 +311,7 @@ aboutObserver.observe(document.getElementById('about'));
 
 
 // What I Do section
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     gsap.set('.service-card', { opacity: 0, y: 50 });
 
     const servicesObserver = new IntersectionObserver((entries) => {
@@ -377,7 +377,7 @@ portfolioItems.forEach(item => {
 const filterBtns = document.querySelectorAll('.filter-btn');
 
 filterBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         filterBtns.forEach(btn => {
             btn.classList.remove('active');
             btn.classList.remove('bg-[#4C9EEB]');
@@ -426,7 +426,7 @@ filterBtns.forEach(btn => {
 
 
 // Skills section
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize skill progress bars
     const skillBars = document.querySelectorAll('.skill-progress-bar');
 
@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const position = skillsSection.getBoundingClientRect();
 
         // If skills section is in viewport
-        if(position.top < window.innerHeight && position.bottom >= 0) {
+        if (position.top < window.innerHeight && position.bottom >= 0) {
             animateSkillBars();
             // Remove event listener after animation is triggered
             window.removeEventListener('scroll', checkIfInView);
@@ -803,11 +803,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
+    contactForm2.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         let isValid = true;
-        const requiredFields = contactForm.querySelectorAll('input, textarea');
+        const requiredFields = contactForm2.querySelectorAll('input, textarea');
 
         requiredFields.forEach(field => {
             if (!field.value.trim()) {
@@ -831,10 +831,10 @@ if (contactForm) {
         });
 
         if (isValid) {
-            const formData = new FormData(contactForm);
+            const formData = new FormData(contactForm2);
 
             try {
-                const response = await fetch(contactForm.action, {
+                const response = await fetch(contactForm2.action, {
                     method: 'POST',
                     body: formData,
                     headers: {
@@ -848,9 +848,9 @@ if (contactForm) {
                     successMessage.innerHTML = '<strong>Success!</strong> Your message has been sent.';
 
                     const wrapper = document.getElementById('form-wrapper');
-                    contactForm.appendChild(successMessage);
+                    contactForm2.appendChild(successMessage);
 
-                    contactForm.reset();
+                    contactForm2.reset();
 
                     setTimeout(() => {
                         successMessage.remove();
@@ -862,7 +862,7 @@ if (contactForm) {
         }
     });
 
-    contactForm.querySelectorAll('input, textarea').forEach(field => {
+    contactForm2.querySelectorAll('input, textarea').forEach(field => {
         field.addEventListener('input', function () {
             this.classList.remove('border-red-500');
 
@@ -872,6 +872,4 @@ if (contactForm) {
             }
         });
     });
-
-
 }
