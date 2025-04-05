@@ -50,9 +50,10 @@ To make the contact form functional using FormSubmit:
 2. Submit once to receive an activation email from FormSubmit.
 
 ## 🌍 Live Demo
-🔗 [**View the Live Site Here**](https://your-github-username.github.io/se-2021-038)
-
-*Replace the URL with your actual GitHub Pages link.*
+🔗 [**View the Live Site Here**](https://rami2212.github.io/My-Portfolio/)
+```
+https://rami2212.github.io/My-Portfolio/
+```
 
 ## 🛠️ How to Run the Project Locally
 Follow these steps to run the project on your local machine:
@@ -73,6 +74,7 @@ cd se-2021-038
 
 ## 💡 Features
 * ✅ Fully responsive and mobile-friendly design
+* ✅ Welcome popup
 * ✅ Smooth scrolling and animations
 * ✅ **Filterable project portfolio** (e.g., Web, App, Design)
 * ✅ Interactive **testimonials slider** using Swiper.js
